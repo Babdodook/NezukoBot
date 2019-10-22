@@ -7,7 +7,6 @@ import shutil
 import requests
 from bs4 import BeautifulSoup
 
-TOKEN = 'NjM1MzY3MjIxNDAwNTY3ODE4.XawCIg.oV8rNFwzinNbWC8noYlgBABIsOI'
 BOT_PREFIX = '!'
 queues = {}
 
@@ -358,5 +357,5 @@ async def on_message(message):
 
     await bot.process_commands(message)
 
-
-bot.run(TOKEN)
+access_token = os.environ["BOT_TOKEN"]
+bot.run(access_token)
